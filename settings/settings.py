@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'caesarian'
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

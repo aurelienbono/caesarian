@@ -1,0 +1,336 @@
+{% extends "../base/base.html" %}
+{% load static %}
+
+{% block title%} Home{% endblock %} 
+
+
+
+{% block content%} 
+
+<div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div><!-- /Preload -->
+	
+	<div id="loader_form">
+		<div data-loader="circle-side-2"></div>
+	</div><!-- /loader_form -->
+	
+	<header>
+		<div class="container-fluid">
+		    <div class="row">
+                <div class="col-3">
+                    <a href="index.html"><img src="{% static 'img/logo_in.png' %}" alt="" width="45" height="45"></a>
+                </div>
+                <div class="col-9 position-relative">
+                    <div id="social">
+                        <ul>
+                            <li><a href="#0"><i class="icon-facebook"></i></a></li>
+                            <li><a href="#0"><i class="icon-twitter"></i></a></li>
+                            <li><a href="#0"><i class="icon-google"></i></a></li>
+                            <li><a href="#0"><i class="icon-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- /social -->
+					<a href="#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
+					<!-- /menu button -->
+                    <nav>
+						<ul class="cd-primary-nav">
+							<li><a href="index.html" class="animated_link">Version 1</a></li>
+							<li><a href="index-2.html" class="animated_link">Version 2</a></li>
+							<li><a href="index-3.html" class="animated_link">Version 3</a></li>
+							<li><a href="about.html" class="animated_link">About Us</a></li>
+							<li><a href="contacts.html" class="animated_link">Contact Us</a></li>
+							<li><a href="https://1.envato.market/A6oJN" class="animated_link" target="_parent">Purchase Template</a></li>
+						</ul>
+					</nav>
+					<!-- /menu -->
+                </div>
+            </div>
+		</div>
+		<!-- /container -->
+	</header>
+	<!-- /Header -->
+	
+	<section class="parallax_window_in" data-parallax="scroll" data-image-src="{% static 'img/sub_header_about.jpg' %}" data-natural-width="1400" data-natural-height="800">
+		<div id="sub_content_in">
+			<h1>About Potenza</h1>
+			<p>"Usu habeo equidem sanctus no ex melius labitur conceptam eos"</p>
+			<br>
+			<a href="#0" class="btn_1 white">View porfile</a>
+		</div>
+	</section>
+	<!-- /section -->
+
+	<main id="general_page">
+		<div class="container_styled_1">
+			<div class="container margin_60_35">
+				<div class="row">
+					<div class="col-lg-6">
+						<h2 class="nomargin_top">Vim ridens<br>eleifend referrentur eu</h2>
+						<p class="lead">Ex graeco nostrud theophrastus nam, cum tibique reprimique ad. Mea omittam electram te, eu cum fastidii sapientem delicatissimi.</p>
+						<p>
+							Ex has nihil liberavisse philosophia. Ne mazim quidam contentiones usu. Id nec <strong>causae periculis </strong>evertitur, stet menandri an pro, his argumentum appellantur eu. An laudem efficiendi has, utinam principes consequat id vel.</p>
+						<p>Ex graeco nostrud theophrastus nam, cum tibique reprimique ad. Mea omittam electram te, eu cum fastidii sapientem delicatissimi. Sed cu eripuit veritus propriae. An eam choro saperet ullamcorper, eam <strong>saperet rationibus</strong> ut. Cu usu tation quaeque vocibus, alterum torquatos persequeris te ius.</p>
+					</div>
+					<div class="col-lg-5 ml-lg-5 add_top_30">
+						<img src=" {% static 'img/about.png' %}" alt="" class="img-fluid" width="400" height="400">
+					</div>
+				</div>
+				<!-- End row -->
+			</div>
+		</div>
+		<div class="container margin_60">
+			<div class="main_title">
+				<h2><em></em>Meet Potenza Team</h2>
+				<p>
+					Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie. Sed ad debet scaevola, ne mel lorem legendos.
+				</p>
+			</div>	
+			<!--Team Carousel -->
+			<div class="row">
+				<div class="owl-carousel owl-theme team-carousel">
+					<div class="team-item">
+						<div class="team-item-img">
+							<img src="{% static 'img/team/team-1.jpg' %}" alt="">
+							<div class="team-item-detail">
+								<div class="team-item-detail-inner">
+									<h4>Mitchell Young</h4>
+									<p>Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.</p>
+									<ul class="social">
+										<li><a href="#0"><i class="icon-facebook"></i></a>
+										</li>
+										<li><a href="#0"><i class="icon-twitter"></i></a>
+										</li>
+										<li><a href="#0"><i class="icon-google"></i></a>
+										</li>
+										<li><a href="#0"><i class="icon-linkedin"></i></a>
+										</li>
+									</ul>
+									<a href="#0" class="btn_1 white">View porfile</a>
+								</div>
+							</div>
+						</div>
+						<div class="team-item-info">
+							<h4>Mitchell Young</h4>
+							<p>CEO</p>
+						</div>
+					</div>
+					<!-- /team-item -->
+					<div class="team-item">
+						<div class="team-item-img">
+							<img src="{% static 'img/team/team-2.jpg' %}" alt="">
+							<div class="team-item-detail">
+								<div class="team-item-detail-inner">
+									<h4>Ronald Green</h4>
+									<p>Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.</p>
+									<ul class="social">
+										<li><a href="#0"><i class="icon-facebook"></i></a>
+										</li>
+										<li><a href="#0"><i class="icon-twitter"></i></a>
+										</li>
+										<li><a href="#0"><i class="icon-google"></i></a>
+										</li>
+										<li><a href="#0"><i class="icon-linkedin"></i></a>
+										</li>
+									</ul>
+									<a href="#0" class="btn_1 white">View porfile</a>
+								</div>
+							</div>
+						</div>
+						<div class="team-item-info">
+							<h4>Ronald Green</h4>
+							<p>Business Strategy</p>
+						</div>
+					</div>
+					<!-- /team-item -->
+					<div class="team-item">
+						<div class="team-item-img">
+							<img src="{% static 'img/team/team-3.jpg' %}" alt="">
+							<div class="team-item-detail">
+								<div class="team-item-detail-inner">
+									<h4>Carl Peppard</h4>
+									<p>Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.</p>
+									<ul class="social">
+										<li><a href="#0"><i class="icon-facebook"></i></a>
+										</li>
+										<li><a href="#0"><i class="icon-twitter"></i></a>
+										</li>
+										<li><a href="#0"><i class="icon-google"></i></a>
+										</li>
+										<li><a href="#0"><i class="icon-linkedin"></i></a>
+										</li>
+									</ul>
+									<a href="#0" class="btn_1 white">View porfile</a>
+								</div>
+							</div>
+						</div>
+						<div class="team-item-info">
+							<h4>Carl Peppard</h4>
+							<p>General Manager</p>
+						</div>
+					</div>
+					<!-- /team-item -->
+					<div class="team-item">
+						<div class="team-item-img">
+							<img src="{% static 'img/team/team-4.jpg' %} " alt="">
+							<div class="team-item-detail">
+								<div class="team-item-detail-inner">
+									<h4>Sandra Bullock</h4>
+									<p>Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.</p>
+									<ul class="social">
+										<li><a href="#0"><i class="icon-facebook"></i></a>
+										</li>
+										<li><a href="#0"><i class="icon-twitter"></i></a>
+										</li>
+										<li><a href="#0"><i class="icon-google"></i></a>
+										</li>
+										<li><a href="#0"><i class="icon-linkedin"></i></a>
+										</li>
+									</ul>
+									<a href="#0" class="btn_1 white">View porfile</a>
+								</div>
+							</div>
+						</div>
+						<div class="team-item-info">
+							<h4>Sandra Bullock</h4>
+							<p>Customer Support</p>
+						</div>
+					</div>
+					<!-- /team-item -->
+				</div>
+			</div>
+			<!--End Team Carousel-->
+		</div>
+		<!-- End container -->
+	</main>
+
+<main id="general_page">
+		<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19864.623539539858!2d-0.1407216728393208!3d51.51178603603532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604cb878e81b3%3A0x91f10fa364452046!2sCovent+Garden%2C+Londra+WC2E+8BG%2C+Regno+Unito!5e0!3m2!1sit!2ses!4v1538380105649" width="600" height="450" allowfullscreen id="map_iframe"></iframe> -->
+		<!-- end map-->
+		<div class="container margin_60_35">
+			<div class="row">
+				<div class="col-lg-8">
+					<h3>Contact us</h3>
+					<p>
+						Mussum ipsum cacilds, vidis litro abertis.
+					</p>
+					<div>
+						<div id="message-contact"></div>
+						<form method="post" action="http://www.ansonika.com/potenza/assets/contact.php" id="contactform">
+							<div class="row">
+								<div class="col-md-6 col-sm-6">
+									<div class="form-group">
+										<label for="name_contact">First Name</label>
+										<input type="text" class="form-control" id="name_contact" name="name_contact">
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-6">
+									<div class="form-group">
+										<label for="lastname_contact">Last Name</label>
+										<input type="text" class="form-control" id="lastname_contact" name="lastname_contact">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6 col-sm-6">
+									<div class="form-group">
+										<label for="email_contact">Email</label>
+										<input type="email" id="email_contact" name="email_contact" class="form-control">
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-6">
+									<div class="form-group">
+										<label for="phone_contact">Phone number</label>
+										<input type="text" id="phone_contact" name="phone_contact" class="form-control">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<label for="message_contact">Your message</label>
+										<textarea rows="5" id="message_contact" name="message_contact" class="form-control" style="height:100px;"></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="verify_contact">Are you human? 3 + 1 =</label>
+										<input type="text" id="verify_contact" class=" form-control">
+									</div>
+									<p><input type="submit" value="Submit" class="btn_1 add_bottom_15" id="submit-contact"></p>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- End col lg 9 -->
+				<aside class="col-lg-4">
+					<div class="box_style_2">
+						<h4>Contacts info</h4>
+						<p>
+							11 Fifth Ave - New York, US
+							<br> + 61 (2) 8093 3400
+							<br>
+							<a href="#">info@domain.com</a>
+						</p>
+						<h5>Get directions</h5>
+						<form action="http://maps.google.com/maps" method="get" target="_blank">
+							<div class="form-group">
+								<input type="text" name="saddr" placeholder="Enter your location" class="form-control" style="background:none;">
+								<input type="hidden" name="daddr" value="New York, NY 11430">
+								<!-- Write here your end point -->
+							</div>
+							<input type="submit" value="Get directions" class="btn_1 add_bottom_15">
+						</form>
+						<hr class="styled">
+						<h4>Departmens</h4>
+						<ul class="contacts_info">
+							<li>Administration
+								<br>
+								<a href="tel://003823932342">0038 23932342</a>
+								<br><a href="tel://003823932342">admin@potenza.com</a>
+								<br>
+								<small>Monday to Friday 9am - 7pm</small>
+							</li>
+							<li>General questions
+								<br>
+								<a href="tel://003823932342">0038 23932342</a>
+								<br><a href="tel://003823932342">questions@potenza.com</a>
+								<br>
+								<small>Monday to Friday 9am - 7pm</small>
+							</li>
+						</ul>
+					</div>
+				</aside>
+				<!--End aside -->
+			</div>
+			<!-- end row-->
+		</div>
+		<!-- end container-->
+	</main>
+
+	
+	<footer class="clearfix">
+		<div class="container">
+			<p>© 2022 Potenza</p>
+			<ul>
+				<li><a href="https://1.envato.market/A6oJN" target="_parent" class="animated_link">Purchase this template</a></li>
+				<li><a href="#0" class="animated_link">Terms and conditions</a></li>
+				<li><a href="#0" class="animated_link">Contacts</a></li>
+			</ul>
+		</div>
+	</footer>
+	<!-- end footer-->
+
+	<div class="cd-overlay-nav">
+		<span></span>
+	</div>
+	<!-- /cd-overlay-nav -->
+
+	<div class="cd-overlay-content">
+		<span></span>
+	</div>
+
+{% endblock%}
