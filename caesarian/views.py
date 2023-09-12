@@ -6,3 +6,7 @@ from django.shortcuts import render
 
 def index(request) : 
 	return render(request, 'pages/index.html')
+
+
+def prediction(request) : 
+	return render(request, 'pages/prediction.html')
