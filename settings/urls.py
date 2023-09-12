@@ -20,5 +20,8 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('caesarian.urls')) , 
-    path('prediction/', include('caesarian.urls'))
+    path('prediction/', include('caesarian.urls')) , 
+    path('login/', include('caesarian.urls')), 
+    path('register/', include('caesarian.urls'))
+
 ]
