@@ -1,8 +1,8 @@
 from django.shortcuts import render 
+from caesarian.data import TransformData
+import joblib
 
 # Create your views here.
-
-
 
 def index(request) : 
 	return render(request, 'pages/index.html')
@@ -23,9 +23,11 @@ def prediction(request) :
 		#I recover the pregnant woman's data on all the data provided in the form
 		pregnant_woman = all_data[6:-2]
 
-	print(user_data)
-	print(pregnant_woman)
-	print(all_data)
+
+		# transformation of pregnant woman data for prediction
+
+		transformer = TransformData()
+		pregnant_woman_transform =  transformer.transform(pregnant_woman)
 
 
 
