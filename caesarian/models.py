@@ -11,7 +11,7 @@ class UserData(models.Model) :
 	gender_user  	   = models.CharField(max_length=100,null=False)
 
 
-class PregnantWomanData : 
+class PregnantWomanData(models.Model) : 
 	Age  				= models.IntegerField(null=False)
 	Delivery_Number 	= models.IntegerField(null=False)
 	Delivery_Time	 	= models.IntegerField(null=False)
