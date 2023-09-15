@@ -5,10 +5,10 @@ from django.db import models
 
 class UserData(models.Model) : 
 
-	user_name 		   = models.CharField(max_length=100,unique=True) 
-	phone_number_user  = models.CharField(max_length=100,unique=True)  
-	contry_user 	   = models.CharField(max_length=100,unique=True)
-	gender_user  	   = models.CharField(max_length=100,unique=True)
+	user_name 		   = models.CharField(max_length=100,null=False) 
+	phone_number_user  = models.CharField(max_length=100,null=False)  
+	contry_user 	   = models.CharField(max_length=100,null=False)
+	gender_user  	   = models.CharField(max_length=100,null=False)
 
 
 class PregnantWomanData : 

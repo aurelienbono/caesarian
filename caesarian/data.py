@@ -3,7 +3,6 @@ function for transform  string data to integer data
 
 """
 
-import joblib
 
 class TransformData:
 	def __init__(self,x=None) : 
@@ -45,8 +44,5 @@ class TransformData:
 
 		return new_array
 
-
-
-['Aurélien MBELLE Bono', '12', '8', 'premature', 'faible', 'oui']
 
 
