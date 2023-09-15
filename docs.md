@@ -21,3 +21,7 @@ rigidité_col_utérus : la rigidité du col de l'utérus, mesurée en Newtons
 number_of_fetuses : Le nombre de fœtus que porte la patiente
 id : un identifiant unique pour la mesure
 rigidity_of_cervix : La rigidité du col de l'utérus, mesurée en Newtons
+
+
+
+
