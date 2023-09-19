@@ -22,6 +22,7 @@ urlpatterns = [
     path('', include('caesarian.urls')) , 
     path('prediction/', include('caesarian.urls')) , 
     path('login/', include('caesarian.urls')), 
-    path('register/', include('caesarian.urls'))
+    path('register/', include('caesarian.urls')), 
+    path('apps/', include('caesarian.urls'))
 
 ]

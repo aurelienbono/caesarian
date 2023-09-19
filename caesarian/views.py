@@ -5,22 +5,27 @@ from . import models
 import numpy as np 
 
 
-
 # Create your views here.
 
+
+# THE LANDING PAGE 
 def index(request) : 
-	return render(request, 'pages/index.html')
+	return render(request, 'pages/landing.html')
 
-
+#AUTHS PAGE 
 def login(request) : 
 	return render(request, 'pages/login.html')
-
+#AUTHS PAGE 
 def register(request) : 
 	return render(request, 'pages/register.html')
 
+## UI FOR THE COLLECTION 
+def apps(request) : 
+	return render(request, 'pages/apps.html')
 
 
 
+# PREPROCESS PREDICTION DATA 
 def makeprediction(X_test):
 
     #Load the joblib
@@ -81,11 +86,12 @@ def prediction(request) :
 										Caesarian_Predict  = pregnant_woman_transform[6],
 
 										)
+		woman.save()
 
 
-		print(y_pred)
+		y_pred = y_pred[0]
 
 
 
-	return render(request, 'pages/prediction.html')
+	return render(request, 'pages/prediction.html' , {'y_pred':y_pred})
 

@@ -83,8 +83,8 @@
 	                    </p>
 	                  
 
-	                    <a href="#start" class="btn_1 rounded yellow" target="_parent">Lancer La Prediction!</a>
-	                    <a href="#start" class="btn_1 rounded mobile_btn">Lancer La Prediction!</a>
+	                    <!-- <a href="#start" class="btn_1 rounded yellow" target="_parent">Lancer La Prediction!</a> -->
+	                    <!-- <a href="#start" class="btn_1 rounded mobile_btn">Lancer La Prediction!</a> -->
 	                </div>
 	                <div class="copy">© 2023 caesarian | YdobonAi </div>
 	            </div>
@@ -98,144 +98,49 @@
 	                    <div id="progressbar"></div>
 	                </div>
 	                <!-- /top-wizard -->
-	                <form method="POST" enctype="multipart/form-data" action="">
-	                	{% csrf_token %}
-	                    <input id="website" name="website" type="text" value="">
-	                    <!-- Leave for security protection, read docs for details -->
+	            
 	                    <div id="middle-wizard">
 	                       
 
 	                        <!-- /Work Positions > UI-Designer ============================== -->
-	                        <div class="branch" id="UI-Designer">
-	                            <div class="step" data-state="bio">
-	                            <h2 class="section_title">Presentation</h2>
-	                            <h3 class="main_question">Informations Personnelles</h3>
-
-	                            <div class="form-group add_top_30">
-	                                <label for="name_user">Nom et prenoms</label>
-	                                <input type="text" name="name_user" id="name_user" class="form-control required" onchange="getVals(this, 'name_field');">
-	                            </div>
-	                            
-	                            <div class="form-group">
-	                                <label for="phone_user">Numero de telephone</label>
-	                                <input type="text" name="phone_user" id="phone_user" class="form-control required">
-	                            </div>
-	                            <div class="form-group">
-	                                <label for="pays_user">Pays</label>
-	                                <input type="text" name="pays_user" id="pays_user" class="form-control required">
-	                            </div>
-	                            <label>Sexe</label>
-								<div class="form-group radio_input">
-								    <label class="container_radio me-3">Homme
-								        <input type="radio" name="gender_user" value="Male" class="required">
-								        <span class="checkmark"></span>
-								    </label>
-								    <label class="container_radio">Femme
-								        <input type="radio" name="gender_user" value="Female" class="required">
-								        <span class="checkmark"></span>
-								    </label>
-								</div>
-	                                
-	                            </div>
-	                        </div>
+	                       
 	                        <!-- /step-->
 
 
-	                        <div class="step" id="bio">
-	                            <h2 class="section_title">Information de la Femme Enceinte</h2>
-	                            <h3 class="main_question">Êtes-vous disponible pour Decouvrir son type d'accouchement  ?</h3>
-	                            <div class="form-group add_top_30">
-	                                <label for="name">Nom et prenoms</label>
-	                                <input type="text" name="name" id="name"  class="form-control required" onchange="getVals(this, 'name_field');">
-	                            </div>
-	                            
-	                            <div class="form-group">
-	                                <label for="age">Age</label>
-	                                <input type="text" name="age" id="age" class="form-control required">
-	                            </div>
-	                            <div class="form-group">
-	                               <label for="Delivery_Number">Numéro d'accouchement</label>
-	                                <input type="text" name="Delivery_Number" id="Delivery_Number" class="form-control required">
-	                            </div>
-
-	                            <div class="form-group">
-	                                <label>Heure De L'Accouchement</label>
-	                                    <label for="Delivery_Time">Choisir une gamme</label>
-	                                    <div class="styled-select">
-	                                        <select class="form-control required" id="Delivery_Time" name="Delivery_Time">
-	                                            <option value="">Choisir Une Gamme</option>
-	                                            <option value="premature">Prématuré</option>
-	                                            <option value="opportun">Opportun</option>
-	                                            <option value="tardif">Tardif</option>
-	                                            
-	                                        </select>
-	                                    </div>
-	                            </div>
-
-	                            <div class="form-group">
-	                             <label>Pression Artérielle</label>
-	                                    <label for="Blood_Of_Pressure">Choisir une gamme</label>
-	                                    <div class="styled-select">
-	                                        <select class="form-control required" id="Blood_Of_Pressure" name="Blood_Of_Pressure">
-	                                            <option value="">Choisir Une Gamme</option>
-	                                            <option value="faible">Faible</option>
-	                                            <option value="normale">Normale</option>
-	                                            <option value="elevee">Elevée</option>
-	                                            
-	                                        </select>
-	                                    </div>
-	                            </div>
-	                            <div class="form-group">
-	                               <label>Problème Cardiaque </label>
-	                                    <label for="Heart_Problem">Choisir une gamme</label>
-	                                    <div class="styled-select">
-	                                        <select class="form-control required" id="Heart_Problem" name="Heart_Problem">
-	                                            <option value="">Choisir Une Gamme</option>
-	                                            <option value="oui">Oui</option>
-	                                            <option value="non">Non</option>	                                            
-	                                        </select>
-	                                    </div>
-	                            </div>
-
-
-	                            <div class="form-group add_bottom_30 add_top_20">
-	                               
-	                            </div>
+	                   
 
 	                        </div>
 
 
 	                        <div class="submit step">
 	                            <div class="summary">
-	                                <div class="wrapper">
-	                                    <h3>Merci pour votre temps<br><span id="name_field"></span>!</h3>
-	                                    <p> <strong id="email_field"></strong></p>
-	                                    <p> Merci d'avoir répondu à notre questionnaire. Nous avons reçu vos informations et nous vous prions de consulter vos résultats dès que possible.</p>
-	                                  
-	                                </div>
+	                                
 
 	                                <div class="text-center">
 	                                    <div class="form-group terms">
-	                                        <label class="container_check">Veuillez accepter notre <a href="#" data-bs-toggle="modal" data-bs-target="#terms-txt">Termes et conditions générales d'utilisation</a> avant de soumettre
-	                                            <input type="checkbox" name="terms" value="Yes" class="required">
-	                                            <span class="checkmark"></span>
+										<h3>Merci pour votre temps<br><span id="name_field"></span>!</h3>
+	                                    <p> <strong id="email_field"></strong></p>
+	                                    <p> Merci d'avoir répondu à notre questionnaire. Nous avons reçu vos informations et nous vous prions de consulter vos résultats dès que possible.</p>
+
+	                                    <h1>{{y_pred}}</h1>
+
+	                                    <label class="container_check">Veuillez Consulter la <a href="#" data-bs-toggle="modal" data-bs-target="#terms-txt">Prescription de Caesarian
+
+	                                        
 	                                        </label>
 	                                    </div>
 	                                </div>
 	                            </div>
 	                        </div>
 	                        <!-- /step last-->
-	                        
+	                          <div id="bottom-wizard">
+	                        <a href="{% url 'apps'%}"> 
+								<button  name="process" class="submit">Lancer une prediction</button>	
+	                        </a>
+	                    </div>
 
 	                    </div>
-	                    <!-- /middle-wizard -->
-	                    <div id="bottom-wizard">
-	                        <button type="button" name="backward" class="backward">Precedent</button>
-	                        <button type="button" name="forward" class="forward">Suivant</button>
-	                        <button type="submit" name="process" class="submit">Consulter Mon Resultat</button>
-	                    </div>
-	                    <!-- /bottom-wizard -->
-	                </form>
+	                
 	            </div>
 	            <!-- /Wizard container -->
 	        </div>
@@ -263,7 +168,7 @@
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h4 class="modal-title" id="termsLabel">Conditions générales d'utilisation</h4>
+					<h4 class="modal-title" id="termsLabel">Prescription de Caesarian</h4>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
@@ -273,47 +178,11 @@
 					<p>En utilisant cette application, vous acceptez les conditions d'utilisation suivantes. Si vous n'acceptez pas ces conditions, vous ne devez pas utiliser cette application.
 					 </p>
 					
-					<strong>Propriété intellectuelle </strong>
-					<p> Tous les droits de propriété intellectuelle sur cette application appartiennent à Ydobonai. Vous ne pouvez pas copier, modifier, distribuer ou utiliser cette application sans l'autorisation écrite de Ydobonai.</p>
 					
-					
-					<strong>Données personnelles </strong>
-					<p>Lorsque vous utilisez cette application, vous pouvez être amené à fournir des données personnelles, telles que votre nom, votre adresse e-mail et votre date de naissance. Ces données seront utilisées pour vous fournir les services de l'application. Ydobonai s'engage à protéger votre vie privée et à ne pas partager vos données personnelles avec des tiers sans votre consentement. </p> 
-
-					<strong>Exclusion de responsabilité </strong>
-					<p> Ydobonai ne garantit pas l'exactitude ou l'exhaustivité des informations fournies par cette application. Ydobonai ne sera pas responsable des dommages directs, indirects, accessoires, consécutifs ou punitifs résultant de votre utilisation de cette application.</p>
-					
-
 				
-					<strong>Modification des conditions d'utilisation </strong>
-					<p> Ydobonai se réserve le droit de modifier ces conditions d'utilisation à tout moment. Les modifications seront publiées sur cette page et entreront en vigueur dès leur publication.
-					</p>
-
-					
-					<strong>Droit applicable </strong>
-					<p> 
-						Ces conditions d'utilisation sont régies par le droit français. Tout litige relatif à ces conditions d'utilisation sera soumis à la compétence exclusive des tribunaux français.
-					</p>
-					
-
-					
-					<strong>Définitions </strong>
-
-					Dans ces conditions d'utilisation, les termes suivants ont la signification suivante :
-
-				<p><strong> "Ydobonai"  </strong> désigne la société Ydobonai, qui est le propriétaire de l'application Caesarian.
-					 <strong> "Application"  </strong>  désigne l'application Caesarian, qui est une application de prédiction du type d'accouchement.
-					  <strong> "Données personnelles"   </strong> désigne toute information relative à une personne physique identifiée ou identifiable.
-					Contact</p>
-					<p> Si vous avez des questions ou des préoccupations concernant ces conditions d'utilisation, veuillez contacter Ydobonai à l'adresse suivante : 
-					</p>
-					
-					<p> bonombelleaurelien@outlook.com  </p>
-
-					Douala-Bonapriso-rue tokoto
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn_1" data-bs-dismiss="modal">Ferme</button>
+					<button type="button" class="btn_1" data-bs-dismiss="modal">Fermez</button>
 				</div>
 			</div>
 			<!-- /.modal-content -->
