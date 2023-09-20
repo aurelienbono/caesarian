@@ -25,6 +25,12 @@ def apps(request) :
 
 
 
+
+def sendmail(request): 
+	pass 
+	## les mails qui dois etre envoyé pour le feedback au niveau du forms dans la landing page
+
+
 # PREPROCESS PREDICTION DATA 
 def makeprediction(X_test):
 
@@ -33,11 +39,12 @@ def makeprediction(X_test):
     # Make predictions on new data
 
     y_pred = model.predict([X_test])
+    y_pred_prob = model.predict_proba([X_test]).tolist()
 
     if y_pred[0] == 0: 
-    	return ['Non',0] 
+    	return ['Non',0, y_pred_prob[0][0],y_pred_prob[0][1]  ] 
     else : 
-    	return ['Oui',1] 
+    	return ['Oui',1,y_pred_prob[0][1] , y_pred_prob[0][0] ]
 
 
 
@@ -78,20 +85,29 @@ def prediction(request) :
 		pregnant_woman_transform.append(y_pred[1])
 
 		woman = models.PregnantWomanData( 
-										Age  			   = pregnant_woman_transform[1], 
-										Delivery_Number    = pregnant_woman_transform[2],
-										Delivery_Time 	   = pregnant_woman_transform[3],
-										Blood_Of_Pressure  = pregnant_woman_transform[4],
-										Heart_Problem	   = pregnant_woman_transform[5],
-										Caesarian_Predict  = pregnant_woman_transform[6],
+										Age  			    = pregnant_woman_transform[1], 
+										Delivery_Number     = pregnant_woman_transform[2],
+										Delivery_Time 	    = pregnant_woman_transform[3],
+										Blood_Of_Pressure   = pregnant_woman_transform[4],
+										Heart_Problem	    = pregnant_woman_transform[5],
+										Caesarian_Predict   = pregnant_woman_transform[6],
+										Caesarian_Label_Yes = round(y_pred[2] *100 , 2),
+										Caesarian_Label_NO  = round(y_pred[3] *100 , 2)
 
 										)
 		woman.save()
 
 
-		y_pred = y_pred[0]
 
 
+		print(y_pred)
 
-	return render(request, 'pages/prediction.html' , {'y_pred':y_pred})
+		content = {  
+			'name':  request.POST.get('name'),
+			'decision' : y_pred[0] , 
+			'true_proba' : round(y_pred[2] *100 , 2), 
+			}
+
+
+	return render(request, 'pages/prediction.html' , content)
 
