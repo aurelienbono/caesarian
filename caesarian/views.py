@@ -1,5 +1,7 @@
 from django.shortcuts import render , redirect
-from caesarian.data import TransformData
+from django.contrib import messages
+from caesarian.data import TransformData 
+
 import joblib
 from . import models
 import numpy as np 
@@ -35,8 +37,28 @@ def login(request) :
 	if request.method == 'POST' : 
 		for element in request.POST : 
 			user_login.append(request.POST[element])
-		user_login = user_login[1:]
-		print(user_login)
+
+		email = user_login[1]
+		password = user_login[2]
+
+
+		user = models.User.objects.filter(email=str(email)).values().first()   
+		password_user =   user['password']
+
+
+		if user and ( password ==password_user) : 
+			return redirect(request.GET.get('next', '/apps'))
+		else : 
+			return render(request, 'pages/login.html', {'error': 'Identifiant ou mot de passe incorrect.'})
+
+
+
+
+
+		# if user : 
+		# 	messages.success(request , f'Hi {user_login[0].title} Welcome Back')
+		# 	return redirect('apps')
+		# # print(user_login)
 
 	return render(request, 'pages/login.html')
 
@@ -54,7 +76,7 @@ def register(request) :
 		user = models.User(name=user_register[0], email=user_register[1] , password=user_register[2])
 		user.save()
 
-		return redirect('apps')
+		return redirect(request.GET.get('next', '/apps'))
 
 	return render(request, 'pages/register.html')
 

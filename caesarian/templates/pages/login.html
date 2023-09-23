@@ -20,7 +20,7 @@
 					<div class="col-md-6 text-center mb-5">
 						<h2 class="heading-section">Login #04</h2>
 					</div>
-				</div> -->
+				</div> --> 
 				<div class="row justify-content-center">
 					<div class="col-md-12 col-lg-10">
 						<div class="wrap d-md-flex">
@@ -40,6 +40,12 @@
 								</div>
 								<form  method="POST" class="signin-form" enctype="multipart/form-data" action="{% url 'login' %}">
 								{% csrf_token %}
+
+									{% if error%} 
+									<div class="alert alert-danger" role="alert">
+										  {{error}}
+										</div>
+									{% endif %}
 
 									<div class="form-group mb-3">
 										<label class="label" for="name">Email</label>
