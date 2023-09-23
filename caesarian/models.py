@@ -12,7 +12,6 @@ class UserData(models.Model) :
 
 
 
-
 class PregnantWomanData(models.Model) : 
 	Age  				= models.IntegerField(null=False)
 	Delivery_Number 	= models.IntegerField(null=False)
@@ -25,9 +24,15 @@ class PregnantWomanData(models.Model) :
 
 
 
-
 class ContactLandingInfo(models.Model) : 
 	firstName   = models.CharField(max_length=100,null=False)
 	lastName    = models.CharField(max_length=100,null=False)
 	email 		= models.EmailField(max_length=100,null=False)
 	message     = models.TextField(max_length=100,null=False)
+
+
+
+class User(models.Model): 
+	name            = models.CharField(max_length=100,null=False)
+	email 		    = models.EmailField(max_length=100,null=False)
+	password 		= models.CharField(max_length=100,null=False)

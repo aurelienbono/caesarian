@@ -1,4 +1,4 @@
-from django.shortcuts import render 
+from django.shortcuts import render , redirect
 from caesarian.data import TransformData
 import joblib
 from . import models
@@ -12,10 +12,7 @@ import numpy as np
 def index(request) : 
 	return render(request, 'pages/landing.html')
 
-#AUTHS PAGE 
-def login(request) : 
-	return render(request, 'pages/login.html')
-#AUTHS PAGE 
+#AUTHS PAGE REGISTER
 def register(request) : 
 	return render(request, 'pages/register.html')
 
@@ -23,12 +20,49 @@ def register(request) :
 def apps(request) : 
 	return render(request, 'pages/apps.html')
 
-
-
-
+## SEND EMAIL
 def sendmail(request): 
 	pass 
 	## les mails qui dois etre envoyé pour le feedback au niveau du forms dans la landing page
+
+
+
+
+
+#AUTHS PAGE LOGIN 
+def login(request) : 
+	user_login = []
+	if request.method == 'POST' : 
+		for element in request.POST : 
+			user_login.append(request.POST[element])
+		user_login = user_login[1:]
+		print(user_login)
+
+	return render(request, 'pages/login.html')
+
+
+
+#AUTHS PAGE REGISTER
+def register(request) : 
+	user_register = []
+	if request.method == 'POST' : 
+		for element in request.POST : 
+			user_register.append(request.POST[element])
+		user_register = user_register[1:]
+
+
+		user = models.User(name=user_register[0], email=user_register[1] , password=user_register[2])
+		user.save()
+
+		return redirect('apps')
+
+	return render(request, 'pages/register.html')
+
+
+
+
+
+
 
 
 # PREPROCESS PREDICTION DATA 
