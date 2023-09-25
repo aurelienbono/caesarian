@@ -44,8 +44,8 @@ Installation
 
 Route
 =====
-`/` est la page d'accueil du projet
-`/login` permet aux utilisateurs de se connecter au projet
-`/register`
+`/` est la page d'accueil du projet <br>
+`/login` permet aux utilisateurs de se connecter au projet <br>
+`/register` <br>
 
 
